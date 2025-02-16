@@ -167,7 +167,7 @@
         app:layout_constraintTop_toBottomOf="@+id/playerOneSet" />
 
     <ImageView
-        android:id="@+id/imageChange1"
+        android:id="@+id/changeArrows1"
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginTop="220dp"
@@ -178,7 +178,7 @@
         app:srcCompat="@drawable/change" />
 
     <ImageView
-        android:id="@+id/imageChange2"
+        android:id="@+id/changeArrows2"
         android:layout_width="30dp"
         android:layout_height="45dp"
         android:layout_marginTop="168dp"
@@ -186,7 +186,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/playerSet"
-        app:layout_constraintTop_toBottomOf="@+id/imageChange1"
+        app:layout_constraintTop_toBottomOf="@+id/changeArrows1"
         app:srcCompat="@drawable/change" />
 
     <Button

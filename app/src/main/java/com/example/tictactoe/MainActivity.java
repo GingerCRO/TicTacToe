@@ -2,6 +2,7 @@ package com.example.tictactoe;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -32,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editorPrefs = sharedPreferences.edit();
+
         playerVsPlayer = (Button) findViewById(R.id.buttonPlayerVsPlayer);
         playerVsComputer = (Button) findViewById(R.id.buttonPlayerVsComputer);
         settings = (Button) findViewById(R.id.buttonSettings);
@@ -46,16 +50,24 @@ public class MainActivity extends AppCompatActivity {
         playerVsPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                editorPrefs.putString("gamemode", "playervsplayer");
+
                 Intent playGame = new Intent(MainActivity.this, GameActivity.class);
                 startActivity(playGame);
+
             }
         });
 
         playerVsComputer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                editorPrefs.putString("gamemode", "playervscomputer");
+
                 Intent playGame = new Intent(MainActivity.this, GameActivity.class);
                 startActivity(playGame);
+
             }
         });
 
