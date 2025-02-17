@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                editorPrefs.putString("gamemode", "playervsplayer");
+                editorPrefs.putString("gamemode", "pvp");
+                editorPrefs.apply();
 
                 Intent playGame = new Intent(MainActivity.this, GameActivity.class);
                 startActivity(playGame);
@@ -63,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                editorPrefs.putString("gamemode", "playervscomputer");
+                editorPrefs.putString("gamemode", "pvc");
+                editorPrefs.apply();
 
                 Intent playGame = new Intent(MainActivity.this, GameActivity.class);
                 startActivity(playGame);
